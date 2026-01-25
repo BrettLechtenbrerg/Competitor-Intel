@@ -1,7 +1,7 @@
 "use client";
 
 import { Sidebar } from "./sidebar";
-import { HelpButton } from "./help-button";
+import { Header } from "./header";
 
 interface DashboardLayoutProps {
   children: React.ReactNode;
@@ -9,12 +9,12 @@ interface DashboardLayoutProps {
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   return (
-    <div className="flex h-screen bg-background">
+    <div className="min-h-screen bg-background">
       <Sidebar />
-      <main className="flex-1 overflow-auto">
-        {children}
-      </main>
-      <HelpButton />
+      <div className="pl-64">
+        <Header />
+        <main className="p-6">{children}</main>
+      </div>
     </div>
   );
 }
