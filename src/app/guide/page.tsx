@@ -484,7 +484,7 @@ export default function GuidePage() {
             Part of <strong>The Master&apos;s Edge Business Program</strong> - Tier 3
           </p>
           <p className="text-xs mt-1">
-            Built with Next.js, Tailwind CSS, and ChangeDetection.io
+            © {new Date().getFullYear()} Total Success AI. All rights reserved.
           </p>
         </div>
       </div>
