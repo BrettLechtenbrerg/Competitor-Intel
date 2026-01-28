@@ -15,6 +15,7 @@ import {
   TrendingUp,
   Globe,
   Search,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
@@ -233,6 +234,49 @@ export function HelpButton() {
 
           {/* Scrollable Content */}
           <div className="overflow-y-auto flex-1 -mx-6 px-6 space-y-3">
+            {/* Welcome Section */}
+            <div className="rounded-xl border bg-gradient-to-br from-primary/5 to-primary/10 p-5">
+              <div className="flex items-start gap-4">
+                <div className="p-2.5 rounded-xl bg-primary/10 shrink-0">
+                  <Sparkles className="h-6 w-6 text-primary" />
+                </div>
+                <div className="space-y-3">
+                  <div>
+                    <h3 className="font-semibold text-lg">Welcome to Competitor Intel!</h3>
+                    <p className="text-sm text-muted-foreground mt-1">
+                      Your AI-powered competitive intelligence platform that keeps you one step ahead.
+                    </p>
+                  </div>
+
+                  <div className="text-sm text-muted-foreground space-y-2">
+                    <p>
+                      <strong className="text-foreground">What it does:</strong>{" "}
+                      Competitor Intel monitors your competitors&apos; websites 24/7, detects changes to pricing,
+                      features, and messaging, and alerts you instantly so you can respond strategically.
+                    </p>
+                    <p>
+                      <strong className="text-foreground">Why it matters:</strong>{" "}
+                      Companies that actively track competitors are 2x more likely to outperform their market.
+                      Know when competitors change prices, launch features, or shift positioning—before your customers do.
+                    </p>
+                    <p>
+                      <strong className="text-foreground">Example:</strong>{" "}
+                      Add your top 3 competitors&apos; pricing pages. When one drops their prices by 15%,
+                      you get an instant alert and can trigger a GHL workflow to notify your sales team or launch a counter-campaign.
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-primary/10">
+                    <p className="text-xs text-muted-foreground">
+                      <strong className="text-foreground">Part of The Master&apos;s Edge:</strong>{" "}
+                      Feeds intelligence into your CEO Dashboard revenue forecasts, and helps inform
+                      Refferq referral offers based on what competitors are doing in the market.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {steps.map((step) => {
               const isExpanded = expandedStep === step.number;
               const Icon = step.icon;
